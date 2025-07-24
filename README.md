@@ -1,4 +1,4 @@
-````markdown
+
 # 📬 Gmail AI Agent Integration with Cursor IDE
 
 Integrate *Cursor AI Editor* with *Gmail* and other services using *MCP servers via Pipedream*, enabling natural language-based workflows such as sending emails, retrieving inbox content, pushing to GitHub, scheduling events, and more — all from inside your IDE.

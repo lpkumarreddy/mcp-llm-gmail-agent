@@ -1,3 +1,4 @@
+````markdown
 # 📬 Gmail AI Agent Integration with Cursor IDE
 
 Integrate **Cursor AI Editor** with **Gmail** and other services using **MCP servers via Pipedream**, enabling natural language-based workflows such as sending emails, retrieving inbox content, pushing to GitHub, scheduling events, and more — all from inside your IDE.
@@ -92,47 +93,56 @@ To connect additional services:
   "name": "YouTube",
   "url": "https://example.m.pipedream.net"
 }
-Place a comma , after the previous entry if needed.
+````
 
-Save changes (Ctrl + S).
+2. Place a comma `,` after the previous entry if needed.
+3. Save changes (`Ctrl + S`).
 
-🤖 Using MCP Workflows in Cursor IDE
-Open the AI Panel
-Click New Chat (top-right)
+---
 
-Or press shortcut: Ctrl + Alt + B
+## 🤖 Using MCP Workflows in Cursor IDE
 
-💬 Example Prompts You Can Use
+### Open the AI Panel
+
+* Click **New Chat** (top-right)
+* Or press shortcut: `Ctrl + Alt + B`
+
+---
+
+### 💬 Example Prompts You Can Use
+
 You can now ask Cursor AI to perform real-world tasks via your integrated MCP services:
 
-📧 Send Email via Gmail
-"Send an email to my team using Gmail summarizing today's meeting notes."
+* 📧 **Send Email via Gmail**
+  `"Send an email to my team using Gmail summarizing today's meeting notes."`
 
-📥 Retrieve Emails
-"Get the last 5 emails from my Gmail inbox and display them here."
+* 📥 **Retrieve Emails**
+  `"Get the last 5 emails from my Gmail inbox and display them here."`
 
-🔁 Translate and Email
-"Translate this paragraph into French and send it via email."
+* 🔁 **Translate and Email**
+  `"Translate this paragraph into French and send it via email."`
 
-🗓️ Schedule Calendar Events
-"Schedule a calendar event for tomorrow at 3 PM using Google Calendar."
+* 🗓️ **Schedule Calendar Events**
+  `"Schedule a calendar event for tomorrow at 3 PM using Google Calendar."`
 
-🧑‍💻 Push Code to GitHub
-"Push the current code to my GitHub repository with the commit message 'MCP Integration Done'."
+* 🧑‍💻 **Push Code to GitHub**
+  `"Push the current code to my GitHub repository with the commit message 'MCP Integration Done'."`
 
-🔐 Security & Best Practices
-Confidentiality: Never share your Pipedream URLs publicly.
+---
 
-Error Logs: Use Cursor IDE logs and Pipedream logs to debug issues.
+## 🔐 Security & Best Practices
 
-Service Expansion: Repeat the MCP setup process for each new integration (LinkedIn, GitHub, Calendar, etc.).
+* **Confidentiality**: Never share your Pipedream URLs publicly.
+* **Error Logs**: Use **Cursor IDE logs** and **Pipedream logs** to debug issues.
+* **Service Expansion**: Repeat the MCP setup process for each new integration (LinkedIn, GitHub, Calendar, etc.).
 
-📄 License
-This project is licensed under the MIT License.
+---
 
-sql
-Copy
-Edit
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+```
 MIT License
 
 Copyright (c) 2025 lpkumarreddy
@@ -154,6 +164,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+```
 
-🙌 Acknowledgements
-Big thanks to the Cursor AI and Pipedream communities for building powerful tools that make natural language programming and automation simple and accessible.
+---
+
+## 🙌 Acknowledgements
+
+Big thanks to the **Cursor AI** and **Pipedream** communities for building powerful tools that make natural language programming and automation simple and accessible.
+
+---

@@ -1,110 +1,138 @@
-# 📬 Project 1: Gmail AI Agent Integration with Cursor IDE
+# 📬 Gmail AI Agent Integration with Cursor IDE
 
-This project demonstrates how to integrate **Cursor AI Editor** with **Gmail** using **MCP servers via Pipedream**, enabling AI-driven workflows to send, retrieve, and manage emails through natural language commands inside your IDE.
+Integrate **Cursor AI Editor** with **Gmail** and other services using **MCP servers via Pipedream**, enabling natural language-based workflows such as sending emails, retrieving inbox content, pushing to GitHub, scheduling events, and more — all from inside your IDE.
 
 ---
 
 ## 🧰 Prerequisites
 
-* ✅ [Pipedream Account](https://pipedream.com/)
-* ✅ Authenticated Gmail Account
-* ✅ Cursor AI Editor installed on:
-
-  * Windows
-  * macOS
-  * Ubuntu 24.04
-* ✅ Basic familiarity with using an IDE
-
----
-
-## 🚀 Installation & Setup
-
-### 1. Install Cursor AI Editor
-
-* **Windows**: [Download Cursor for Windows](https://www.cursor.so/)
-* **macOS**: [Installation Steps for macOS](https://www.cursor.so/)
-* **Ubuntu 24.04**: [Installation Steps for Ubuntu](https://www.cursor.so/)
-
-🎥 [Watch Installation Tutorial (YouTube)](https://www.youtube.com/)
-
-> Sign in to Cursor using your **Gmail** or **GitHub** account.
+- ✅ [Pipedream Account](https://pipedream.com/)
+- ✅ Authenticated Gmail Account
+- ✅ Cursor AI Editor installed on:
+  - Windows
+  - macOS
+  - Ubuntu 24.04
+- ✅ Basic knowledge of IDE usage
 
 ---
 
-## ⚙️ Cursor IDE Configuration
+## 🛠️ Cursor Installation & Setup
 
-1. Launch **Cursor IDE**
+### 1️⃣ Install Cursor AI Editor
+
+#### 🪟 For Windows:
+- [Download Cursor for Windows](https://www.cursor.so/)
+- [Watch YouTube Installation Tutorial](https://www.youtube.com/)
+
+#### 🍎 For macOS:
+- [Setup Guide for macOS](https://www.cursor.so/)
+
+#### 🐧 For Ubuntu 24.04:
+- [Setup Guide for Ubuntu 24.04](https://www.cursor.so/)
+
+> ✅ **Sign in with your Gmail or GitHub account**  
+> After authentication (in a new browser tab), return to the Cursor IDE to continue.
+
+---
+
+## ⚙️ Initial Configuration in Cursor IDE
+
+### Welcome & Preferences Setup
+
+1. **Launch Cursor IDE**
 2. On Welcome Screen:
-
-   * Click **Skip**
-   * Continue through all setup screens
-3. Click the **⚙️ Settings** icon (top-right)
-4. Navigate to **Tools & Integrations**
-5. Click **Add Custom MCP**
-
----
-
-## 🌐 Adding MCP Servers (via Pipedream)
-
-### Step 1: Get Your Gmail MCP Server URL
-
-* Go to [Pipedream](https://pipedream.com/)
-* Sign in / Sign up
-* Search and connect the **Gmail** integration
-* Switch to the **Cursor** tab
-* Copy your **Gmail-specific MCP URL**
-
-> ⚠️ **Never share this URL** – it contains sensitive authentication tokens.
-
-### Step 2: Add MCP to Cursor IDE
-
-* Open **Cursor Settings → Tools & Integrations**
-* Paste the copied **MCP configuration URL**
-* Save (Ctrl + S)
+   - Click **Skip**
+   - Click **Continue** through each screen:
+     - Theme Selection
+     - Quick Start
+     - Data Sharing
+     - Review Settings
 
 ---
 
-## 🤖 Running Gmail Workflows in Cursor
+## 🌐 MCP Integration via Pipedream
 
-### Step 1: Open AI Panel
+### Step 1: Access Cursor Settings
 
-* Click **New Chat** (top-right), or use shortcut `Ctrl + Alt + B`
-
-### Step 2: Use AI Prompts
-
-Examples:
-
-* `"Send an email to my team using Gmail summarizing today's meeting notes."`
-* `"Get my details from LinkedIn, apply for a job at {company name}, write a short cover letter, and send everything to {email address}."`
-
-### Step 3: Confirm Results
-
-* Check your Gmail **Sent folder**
-* Monitor logs in **Cursor IDE** for success or errors
+- Click the **⚙️ Settings** icon in the top-right
+- Go to **Tools & Integrations**
+- Click **Add Custom MCP**
 
 ---
 
-## 🧪 More Example Prompts
+### Step 2: Get MCP Server URL from Pipedream
 
-* 📥 **Fetch Emails**: `Get the last 5 emails from my Gmail inbox and display them here.`
-* 🗓️ **Schedule Event**: `Schedule a calendar event for tomorrow at 3 PM using Google Calendar.`
-* 🧑‍💻 **Push to GitHub**: `Push the current code to my GitHub repository with the commit message "MCP Integration Done".`
+1. Go to [Pipedream](https://pipedream.com/)
+2. **Sign in / Sign up**
+3. Search for a tool (e.g., **Gmail**, **LinkedIn**, **GitHub**)
+4. Click **Connect Account** and complete authentication
+5. Click the **Cursor** tab from the list of clients
+6. **Copy the Gmail-specific MCP configuration URL**
 
----
-
-## 🔐 Security & Notes
-
-* **Security**: Never share your **MCP URL** with anyone.
-* **Error Handling**: Check logs in **Pipedream** or **Cursor IDE**.
-* **Extend Functionality**: To connect other tools like YouTube or Calendar, repeat the **MCP setup** steps.
+> ⚠️ **Do not share your Pipedream URLs** — they include private authentication tokens.
 
 ---
 
-## 📄 License
+### Step 3: Add MCP Server in Cursor IDE
 
-This project is licensed under the **MIT License**.
+- Go back to **Cursor → Settings → Tools & Integrations**
+- Paste the copied Gmail MCP configuration
+- Press `Ctrl + S` to **save**
 
-```
+---
+
+### ➕ Add More MCP Services (YouTube, Calendar, GitHub)
+
+To connect additional services:
+
+1. In the `mcpServers` object:
+   - Add a new entry using this format:
+```json
+{
+  "name": "YouTube",
+  "url": "https://example.m.pipedream.net"
+}
+Place a comma , after the previous entry if needed.
+
+Save changes (Ctrl + S).
+
+🤖 Using MCP Workflows in Cursor IDE
+Open the AI Panel
+Click New Chat (top-right)
+
+Or press shortcut: Ctrl + Alt + B
+
+💬 Example Prompts You Can Use
+You can now ask Cursor AI to perform real-world tasks via your integrated MCP services:
+
+📧 Send Email via Gmail
+"Send an email to my team using Gmail summarizing today's meeting notes."
+
+📥 Retrieve Emails
+"Get the last 5 emails from my Gmail inbox and display them here."
+
+🔁 Translate and Email
+"Translate this paragraph into French and send it via email."
+
+🗓️ Schedule Calendar Events
+"Schedule a calendar event for tomorrow at 3 PM using Google Calendar."
+
+🧑‍💻 Push Code to GitHub
+"Push the current code to my GitHub repository with the commit message 'MCP Integration Done'."
+
+🔐 Security & Best Practices
+Confidentiality: Never share your Pipedream URLs publicly.
+
+Error Logs: Use Cursor IDE logs and Pipedream logs to debug issues.
+
+Service Expansion: Repeat the MCP setup process for each new integration (LinkedIn, GitHub, Calendar, etc.).
+
+📄 License
+This project is licensed under the MIT License.
+
+sql
+Copy
+Edit
 MIT License
 
 Copyright (c) 2025 lpkumarreddy
@@ -113,8 +141,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is furnished
-to do so, subject to the following conditions:
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
@@ -124,14 +152,8 @@ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
----
-
-## 🙌 Acknowledgements
-
-Special thanks to the **Cursor AI** and **Pipedream** communities for building such powerful integration tools that simplify complex AI workflows.
-
-
+🙌 Acknowledgements
+Big thanks to the Cursor AI and Pipedream communities for building powerful tools that make natural language programming and automation simple and accessible.

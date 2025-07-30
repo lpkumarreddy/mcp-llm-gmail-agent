@@ -127,6 +127,7 @@ You can now ask Cursor AI to perform real-world tasks via your integrated MCP se
 
 * 🧑‍💻 **Push Code to GitHub**
   `"Push the current code to my GitHub repository with the commit message 'MCP Integration Done'."`
+<img width="842" height="607" alt="Screenshot 2025-07-28 213803" src="https://github.com/user-attachments/assets/c15c6f89-e6b3-469f-91d2-250e551072f8" />
 
 ---
 
